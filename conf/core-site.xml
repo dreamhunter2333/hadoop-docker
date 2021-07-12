@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <!--指定 namenode 的 hdfs 协议文件系统的通信地址-->
+    <name>fs.defaultFS</name>
+    <value>hdfs://hadoop001:8020</value>
+  </property>
+  <property>
+    <!--指定 hadoop 存储临时文件的目录-->
+    <name>hadoop.tmp.dir</name>
+    <value>/opt/hadoopdata/tmp</value>
+  </property>
+</configuration>
