@@ -6,6 +6,7 @@
 
 `etc/hadoop` 下的一些配置文件
 
+```bash
 conf
 ├── core-site.xml
 ├── hadoop-env.sh
@@ -13,25 +14,30 @@ conf
 ├── mapred-site.xml
 ├── workers
 └── yarn-site.xml
+```
 
 ## sbin
 
 `sbin` 下的一些脚本
 
+```bash
 sbin
 ├── start-dfs.sh
 ├── start-yarn.sh
 ├── stop-dfs.sh
 └── stop-yarn.sh
+```
 
 ## ssh 登录的 key
 
 `ssh` 免密登录
 
+```bash
 ssh
 ├── authorized_keys
 ├── id_rsa
 └── id_rsa.pub
+```
 
 ## hadoop
 
