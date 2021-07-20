@@ -3,9 +3,6 @@ services:
 
     hadoop001:
         image: hadoop:1.0
-        build:
-            context: .
-            dockerfile: Dockerfile
         container_name: hadoop001
         hostname: hadoop001
         command: sh /opt/start.sh
@@ -63,9 +60,6 @@ services:
 
     hadoop003:
         image: hadoop:1.0
-        build:
-            context: .
-            dockerfile: Dockerfile
         container_name: hadoop003
         hostname: hadoop003
         command: sh /opt/start_slave.sh
