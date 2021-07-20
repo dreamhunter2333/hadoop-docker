@@ -9,4 +9,12 @@
     <name>dfs.datanode.data.dir</name>
     <value>/opt/hadoopdata/datanode/data</value>
   </property>
+  <!-- <property>
+    <name>dfs.client.use.datanode.hostname</name>
+    <value>true</value>
+  </property> -->
+  <!-- <property>
+    <name>dfs.datanode.address</name>
+    <value>hadoop001:9866</value>
+  </property> -->
 </configuration>
