@@ -16,18 +16,6 @@ conf
 └── yarn-site.xml
 ```
 
-## sbin
-
-`sbin` 下的一些脚本
-
-```bash
-sbin
-├── start-dfs.sh
-├── start-yarn.sh
-├── stop-dfs.sh
-└── stop-yarn.sh
-```
-
 ## ssh 登录的 key
 
 `ssh` 免密登录
