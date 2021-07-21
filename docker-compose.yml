@@ -2,7 +2,7 @@ version: '3'
 services:
 
     hadoop001:
-        image: hadoop:1.0
+        image: hadoop-docker:1.0
         container_name: hadoop001
         hostname: hadoop001
         command: sh /opt/start.sh
@@ -10,9 +10,6 @@ services:
             - hadoop002
             - hadoop003
         volumes:
-            - ./ssh/authorized_keys:/root/.ssh/authorized_keys
-            - ./ssh/id_rsa:/root/.ssh/id_rsa
-            - ./ssh/id_rsa.pub:/root/.ssh/id_rsa.pub
             - ./hadoop:/opt/hadoop
             - ./conf/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
             - ./conf/hadoop-env.sh:/opt/hadoop/etc/hadoop/hadoop-env.sh
@@ -29,7 +26,7 @@ services:
             - 9866:9866
 
     hadoop002:
-        image: hadoop:1.0
+        image: hadoop-docker:1.0
         container_name: hadoop002
         hostname: hadoop002
         build:
@@ -37,9 +34,6 @@ services:
             dockerfile: Dockerfile
         command: sh /opt/start_slave.sh
         volumes:
-            - ./ssh/authorized_keys:/root/.ssh/authorized_keys
-            - ./ssh/id_rsa:/root/.ssh/id_rsa
-            - ./ssh/id_rsa.pub:/root/.ssh/id_rsa.pub
             - ./hadoop:/opt/hadoop
             - ./conf/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
             - ./conf/hadoop-env.sh:/opt/hadoop/etc/hadoop/hadoop-env.sh
@@ -51,14 +45,11 @@ services:
             - ./start_slave.sh:/opt/start_slave.sh
 
     hadoop003:
-        image: hadoop:1.0
+        image: hadoop-docker:1.0
         container_name: hadoop003
         hostname: hadoop003
         command: sh /opt/start_slave.sh
         volumes:
-            - ./ssh/authorized_keys:/root/.ssh/authorized_keys
-            - ./ssh/id_rsa:/root/.ssh/id_rsa
-            - ./ssh/id_rsa.pub:/root/.ssh/id_rsa.pub
             - ./hadoop:/opt/hadoop
             - ./conf/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
             - ./conf/hadoop-env.sh:/opt/hadoop/etc/hadoop/hadoop-env.sh
