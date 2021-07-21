@@ -1,5 +1,4 @@
 #!/bin/sh
-killall java
 while(true)
 do
     pid=`ps -ef|grep "sshd"|grep -v "grep" | awk '{print $2}'`
