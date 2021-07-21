@@ -17,7 +17,6 @@ fi
 if [ "${pid}" = "" ] || [ "${pid2}" = "" ]
 then
     /opt/hadoop/sbin/stop-all.sh
-    # ssh hadoop002 "killall java && rm -rf /tmp/hadoop*"
     /opt/hadoop/sbin/start-dfs.sh
     /opt/hadoop/sbin/start-yarn.sh
     echo "hadoop start end"
