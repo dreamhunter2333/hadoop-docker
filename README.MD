@@ -2,10 +2,11 @@
 
 使用 docker 搭建 hadoop 环境
 
-构建镜像
-
 ```bash
-docker build -t hadoop-docker:1.0 .
+# 构建镜像
+docker build -t registry.cn-beijing.aliyuncs.com/dreamhunter/hadoop-docker:1.0 .
+# 启动
+docker-compose up
 ```
 
 ## conf

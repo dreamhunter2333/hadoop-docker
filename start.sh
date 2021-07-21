@@ -1,6 +1,6 @@
 #!/bin/sh
 if [ ! -d "/opt/hadoopdata/tmp" ];then
-    /opt/hadoop/bin/hdfs namenode -format
+    hdfs namenode -format
 fi
 while(true)
 do
