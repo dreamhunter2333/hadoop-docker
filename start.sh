@@ -1,8 +1,5 @@
 #!/bin/sh
-if [ ! -d "/opt/hadoopdata" ];then
-    rm -rf /opt/hadoopdata
-    ssh hadoop002 "rm -rf /opt/hadoopdata"
-    ssh hadoop003 "rm -rf /opt/hadoopdata"
+if [ ! -d "/opt/hadoopdata/tmp" ];then
     /opt/hadoop/bin/hdfs namenode -format
 fi
 while(true)

@@ -12,10 +12,9 @@ RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get install openssh-server -y
 RUN mkdir /run/sshd
 
-COPY ssh/ /root/.ssh/
-RUN chown root:root /root/.ssh/*
-RUN chmod 644 /root/.ssh/*
-RUN chmod 600 /root/.ssh/id_rsa
+RUN ssh-keygen -t rsa -f /root/.ssh/id_rsa -N ''
+RUN cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+RUN chmod 600 /root/.ssh/authorized_keys
 
 ENV HADOOP_HOME /opt/hadoop
 ENV PATH /opt/hadoop/bin:$PATH

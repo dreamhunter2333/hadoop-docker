@@ -2,6 +2,12 @@
 
 使用 docker 搭建 hadoop 环境
 
+构建镜像
+
+```bash
+docker build -t hadoop-docker:1.0 .
+```
+
 ## conf
 
 `etc/hadoop` 下的一些配置文件
@@ -16,17 +22,6 @@ conf
 └── yarn-site.xml
 ```
 
-## ssh 登录的 key
+## hadoop-bin
 
-`ssh` 免密登录
-
-```bash
-ssh
-├── authorized_keys
-├── id_rsa
-└── id_rsa.pub
-```
-
-## hadoop
-
-hadoop release 文件
+hadoop-bin 存放 [hadoop release 文件](https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.3.1/hadoop-3.3.1.tar.gz)
